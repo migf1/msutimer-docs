@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('msutimer_8h.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
-<p>Simple High Resolution Timer for C.  
+<p>Simple High Resolution Timer for C (public interface).  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
@@ -154,12 +154,12 @@ Functions</h2></td></tr>
 <tr class="separator:a59f02f48eab0566b6188937a8d5c8292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Simple High Resolution Timer for C. </p>
+<div class="textblock"><p>Simple High Resolution Timer for C (public interface). </p>
 <dl class="section version"><dt>Version</dt><dd>0.01 alpha </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>19 June, 2021 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>migf1 <a href="#" onclick="location.href='mai'+'lto:'+'mig'+'_f'+'1@h'+'ot'+'mai'+'l.'+'com'; return false;">mig_f<span style="display: none;">.nosp@m.</span>1@ho<span style="display: none;">.nosp@m.</span>tmail<span style="display: none;">.nosp@m.</span>.com</a> </dd></dl>
-<dl class="section user"><dt>Language: ISO C99</dt><dd></dd></dl>
-<p>Public interface to <em>MSUTimer</em> private implementation. </p>
+<dl class="section user"><dt>Language:</dt><dd>ISO C99 </dd></dl>
+<dl class="section user"><dt>Online Docs:</dt><dd><a href="https://migf1.github.io/msutimer-docs/">https://migf1.github.io/msutimer-docs/</a> </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a0ad520b7e2ed145d3b650b37be37da88"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ad520b7e2ed145d3b650b37be37da88">&#9670;&nbsp;</a></span>msutimer_accuracy_usecs()</h2>
@@ -186,7 +186,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <code>double</code> representing the <em>MSUTimer</em> accuracy on the current platform in <em>microseconds</em>, or <code>-DBL_MAX</code> on error. </dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd>On Windows, a typical accuracy is around 0.320 <em>microseconds</em>. Occasionally the function may return a bogus value, but it is pretty rare (and I really don't know why is that).</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>On Windows, a typical accuracy is around 0.320 <em>microseconds</em>. Occasionally the function may return a bogus value, but it is pretty rare (and I really don't know why it's doing that).</dd></dl>
 <dl class="section user"><dt>Failures:</dt><dd><ul>
 <li>timer is <code>NULL</code> (<code>errno</code> is set to <code>EDOM</code>) </li>
 </ul>
@@ -210,12 +210,12 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// MSUTimer accuracy: 0.000000320 secs</span></div>
 <div class="line"><span class="comment">// MSUTimer accuracy: 0.000320801 msecs</span></div>
 <div class="line"><span class="comment">// MSUTimer accuracy: 0.320312500 usecs</span></div>
-<div class="ttc" id="amsutimer_8h_html"><div class="ttname"><a href="msutimer_8h.html">msutimer.h</a></div><div class="ttdoc">Simple High Resolution Timer for C.</div></div>
-<div class="ttc" id="amsutimer_8h_html_a0ad520b7e2ed145d3b650b37be37da88"><div class="ttname"><a href="msutimer_8h.html#a0ad520b7e2ed145d3b650b37be37da88">msutimer_accuracy_usecs</a></div><div class="ttdeci">double msutimer_accuracy_usecs(MSUTimer *timer)</div><div class="ttdoc">Get MSUTimer accuracy.</div><div class="ttdef"><b>Definition:</b> msutimer.c:441</div></div>
+<div class="ttc" id="amsutimer_8h_html"><div class="ttname"><a href="msutimer_8h.html">msutimer.h</a></div><div class="ttdoc">Simple High Resolution Timer for C (public interface).</div></div>
+<div class="ttc" id="amsutimer_8h_html_a0ad520b7e2ed145d3b650b37be37da88"><div class="ttname"><a href="msutimer_8h.html#a0ad520b7e2ed145d3b650b37be37da88">msutimer_accuracy_usecs</a></div><div class="ttdeci">double msutimer_accuracy_usecs(MSUTimer *timer)</div><div class="ttdoc">Get MSUTimer accuracy.</div><div class="ttdef"><b>Definition:</b> msutimer.c:446</div></div>
 <div class="ttc" id="amsutimer_8h_html_a3803c248d042a7a010433db47737b6e4"><div class="ttname"><a href="msutimer_8h.html#a3803c248d042a7a010433db47737b6e4">MSUT_US2S</a></div><div class="ttdeci">#define MSUT_US2S(usecs)</div><div class="ttdoc">Convert microseconds to seconds.</div><div class="ttdef"><b>Definition:</b> msutimer.h:28</div></div>
 <div class="ttc" id="amsutimer_8h_html_a39aa51836a0fc8e7da43e6293bc6f87a"><div class="ttname"><a href="msutimer_8h.html#a39aa51836a0fc8e7da43e6293bc6f87a">MSUT_US2MS</a></div><div class="ttdeci">#define MSUT_US2MS(usecs)</div><div class="ttdoc">Convert microseconds to milliseconds.</div><div class="ttdef"><b>Definition:</b> msutimer.h:27</div></div>
-<div class="ttc" id="amsutimer_8h_html_a9eb8df77fffe284b53342938a32a8bd8"><div class="ttname"><a href="msutimer_8h.html#a9eb8df77fffe284b53342938a32a8bd8">msutimer_free</a></div><div class="ttdeci">MSUTimer * msutimer_free(MSUTimer *timer)</div><div class="ttdoc">Free an existing timer.</div><div class="ttdef"><b>Definition:</b> msutimer.c:234</div></div>
-<div class="ttc" id="amsutimer_8h_html_acb8782114eb99c008bd70f31856075f7"><div class="ttname"><a href="msutimer_8h.html#acb8782114eb99c008bd70f31856075f7">msutimer_new</a></div><div class="ttdeci">MSUTimer * msutimer_new(void)</div><div class="ttdoc">Create a new timer.</div><div class="ttdef"><b>Definition:</b> msutimer.c:174</div></div>
+<div class="ttc" id="amsutimer_8h_html_a9eb8df77fffe284b53342938a32a8bd8"><div class="ttname"><a href="msutimer_8h.html#a9eb8df77fffe284b53342938a32a8bd8">msutimer_free</a></div><div class="ttdeci">MSUTimer * msutimer_free(MSUTimer *timer)</div><div class="ttdoc">Free an existing timer.</div><div class="ttdef"><b>Definition:</b> msutimer.c:239</div></div>
+<div class="ttc" id="amsutimer_8h_html_acb8782114eb99c008bd70f31856075f7"><div class="ttname"><a href="msutimer_8h.html#acb8782114eb99c008bd70f31856075f7">msutimer_new</a></div><div class="ttdeci">MSUTimer * msutimer_new(void)</div><div class="ttdoc">Create a new timer.</div><div class="ttdef"><b>Definition:</b> msutimer.c:182</div></div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -507,7 +507,7 @@ Functions</h2></td></tr>
 <div class="line">msutimer_gettime( timer );</div>
 <div class="line">printf( <span class="stringliteral">&quot;Elapsed: %.9lf usecs\n&quot;</span>, <a class="code" href="msutimer_8h.html#a1a38919d5622d0d27cf6292b19b34f04">msutimer_diff_usecs</a>(timer) );</div>
 <div class="line"><a class="code" href="msutimer_8h.html#a9eb8df77fffe284b53342938a32a8bd8">msutimer_free</a>( timer );</div>
-<div class="ttc" id="amsutimer_8h_html_a1a38919d5622d0d27cf6292b19b34f04"><div class="ttname"><a href="msutimer_8h.html#a1a38919d5622d0d27cf6292b19b34f04">msutimer_diff_usecs</a></div><div class="ttdeci">double msutimer_diff_usecs(MSUTimer *timer)</div><div class="ttdoc">Get updated time-difference in microseconds.</div><div class="ttdef"><b>Definition:</b> msutimer.c:325</div></div>
+<div class="ttc" id="amsutimer_8h_html_a1a38919d5622d0d27cf6292b19b34f04"><div class="ttname"><a href="msutimer_8h.html#a1a38919d5622d0d27cf6292b19b34f04">msutimer_diff_usecs</a></div><div class="ttdeci">double msutimer_diff_usecs(MSUTimer *timer)</div><div class="ttdoc">Get updated time-difference in microseconds.</div><div class="ttdef"><b>Definition:</b> msutimer.c:330</div></div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
