@@ -1,2 +1,2 @@
-# msutimer.github.io
+# https://migf1.github.io/msutimer.github.io/
 Testing...
