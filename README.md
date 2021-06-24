@@ -1,2 +1,5 @@
 # https://migf1.github.io/msutimer-docs/
-Testing github pages...
+
+Just testing github pages...
+
+The actual *MSUTimer* repo is currently private.
