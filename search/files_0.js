@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['msutimer_2eh_15',['msutimer.h',['../msutimer_8h.html',1,'']]]
+  ['license_2etxt_16',['LICENSE.txt',['../_l_i_c_e_n_s_e_8txt.html',1,'']]]
 ];

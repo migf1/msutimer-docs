@@ -1,4 +1,4 @@
 # https://migf1.github.io/msutimer-docs/
 
-Just testing github pages (the actual *MSUTimer* repo is still under private
-development).
+Online documentation of *MSUTimer* (follow the above link).
+The actual *MSUTimer* repo is available at https://github.com/migf1/msutimer.
